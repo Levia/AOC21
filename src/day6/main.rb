@@ -17,9 +17,11 @@ class Main < Base
         end
       end.values.reduce(:+)
     end
+
+    def prepare_input(input_file)
+      File.read(input_file).split(",").map(&:to_i)
+    end
 end
 
-solver = Main.new("src/day6/input.txt")
-puts "PART 1: #{solver.part1}"
-puts "PART 2: #{solver.part2}"
+Main.solve("src/day6/input.txt")
 

@@ -8,7 +8,7 @@ class Main < Base
       current
     end
 
-    puts "Part 1: #{count}"
+    count
   end
 
   def part2
@@ -19,7 +19,7 @@ class Main < Base
       count += 1
     end
 
-    puts "Part 2: #{count}"
+    count
   end
 
   private
@@ -29,6 +29,5 @@ class Main < Base
     end
 end
 
-solver = Main.new("src/day1/input.txt")
-solver.part1
-solver.part2
+Main.solve("src/day1/input.txt")
+

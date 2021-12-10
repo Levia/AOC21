@@ -89,10 +89,9 @@ class Main < Base
     end
 
     def prepare_input(input_file)
-      File.readlines(input_file).map { |l| l.strip }
+      File.readlines(input_file).map(&:strip)
     end
 end
 
-solver = Main.new("src/day10/input.txt")
-puts "PART 1: #{solver.part1}"
-puts "PART 2: #{solver.part2}"
+Main.solve("src/day10/input.txt")
+

@@ -1,8 +1,6 @@
 require_relative "../base"
 
 class Main < Base
-  attr_reader :input
-
   def part1
     input.inject(0) { |sum, x| sum + (median-x).abs }
   end
@@ -27,8 +25,10 @@ class Main < Base
       val = (num - mean).abs
       (val * (val + 1)) / 2
     end
+
+    def prepare_input(input_file)
+      File.read(input_file).split(",").map(&:to_i)
+    end
 end
 
-solver = Main.new("src/day7/input.txt")
-puts "Part 1: #{solver.part1}"
-puts "Part 2: #{solver.part2}"
+Main.solve("src/day7/input.txt")

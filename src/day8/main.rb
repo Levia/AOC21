@@ -109,6 +109,5 @@ class Main < Base
       end
 end
 
-solver = Main.new("src/day8/input.txt")
-puts "PART 1: #{solver.part1}"
-puts "PART 2: #{solver.part2}"
+Main.solve("src/day8/input.txt")
+
